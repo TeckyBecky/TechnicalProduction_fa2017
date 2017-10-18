@@ -137,48 +137,76 @@ void loop(void)
      * Speed cannot be determined due to inconsistency however up returns positive values and down returns negative.
      * Possible Problems: Interval of initial and secondary values cost switch but generally movement towards the front or nod forward will return positive value while the latter returns negative
      */
-    if(x_diff >= 6)
+    //-------------------------------------------------LEFT AND RIGHT-------------------------------------------------
+    if(x_diff >= 5.5 && x_diff <= 6.5)
     {
-      frontR.setPixelColor(1, 255, 0, 0);
-      frontR.show();
-      //Red
-      //Left
+      //Left, Slow
     }
-    else if(x_diff <= -6)
+    else if(x_diff <= -5.5 && x_diff >= -6.5)
     {
-      frontR.setPixelColor(1, 255, 0, 255);
-      frontR.show();
-      //Puple
-      //Right
+      //Right, Slow
     }
-    else if(y_diff >= 6)
+    else if(x_diff > 6.5)
     {
-      frontR.setPixelColor(0, 255, 136, 0);
-      frontR.show();
-      //Orange
-      //Forward
+      //Left, Fast
     }
-    else if (y_diff <= -6)
+    else if(x_diff < -6.5)
     {
-      frontR.setPixelColor(0, 0, 255, 0);
-      frontR.show();
-      //Green
-      //Backward
+      //Right, Fast
     }
-    else if(z_diff >= 6)
+    //-------------------------------------------------FORWARD AND BACKWARD-------------------------------------------------
+    else if(y_diff >= 5.5 && y_diff <= 6.5)
     {
-      backR.setPixelColor(0, 255, 255, 0);
-      backR.show();
-      //Yellow
-      //Up
+      //Forward, Slow
     }
-    else if(z_diff <= -6)
+    else if(y_diff <= -5.5 && y_diff >= -6.5)
     {
-      backR.setPixelColor(0, 0, 0, 255);
-      backR.show();
-      //Down
-      //Blue
+      //Backward, Slow
     }
+    else if(y_diff > 6.5)
+    {
+      //Forward, Fast
+    }
+    else if(y_diff < -6.5)
+    {
+      //Backward, Fast
+    }
+    //-------------------------------------------------UP AND DOWN-------------------------------------------------
+    else if(z_diff >= 5.5 && z_diff <= 6.5)
+    {
+      //Up, Slow
+    }
+    else if(z_diff <= -5.5 && z_diff >= -6.5)
+    {
+      //Down, Slow
+    }
+    else if(z_diff > 6.5)
+    {
+      //Up, Fast
+    }
+    else if(z_diff < -6.5)
+    {
+      //Down, Fast
+    }
+    //-------------------------------------------------DIAGONAL, FORWARD, DOWN, RIGHT-------------------------------------------------
+    else if(x_diff >= 5.5 && x_diff <= 6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= 5.5 && y_diff <= 6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff > 6.5 && z_diff < -6.5 && y_diff > 6.5)
+    {
+      //Diagonal, Fast
+    }
+    //-------------------------------------------------DIAGONAL, FORWARD, DOWN, LEFT-------------------------------------------------
+    else if(x_diff <= -5.5 && x_diff >= -6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= 5.5 && y_diff <= 6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff < -6.5 && z_diff < -6.5 && y_diff > 6.5)
+    {
+      //Diagonal, Fast
+    }
+    //-------------------------------------------------ALL OFF-------------------------------------------------
     else
     {
       frontR.setPixelColor(0, 0, 0, 0);
