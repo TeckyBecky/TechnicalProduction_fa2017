@@ -16,14 +16,6 @@ Adafruit_NeoPixel backL = Adafruit_NeoPixel(1, 10, NEO_GRB + NEO_KHZ800);  // ba
 void setup(void)
 {
   Serial.begin(9600);
-  Serial.println("Magnetometer Test"); Serial.println("");
-  /* Initialise the sensor */
-  if(!mag.begin())
-  {
-    /* There was a problem detecting the LSM303 ... check your connections */
-    Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
-    while(1);
-  }
 
   frontR.begin();
   frontL.begin();
@@ -39,6 +31,7 @@ void setup(void)
 
 void loop(void)
 {
+  Serial.println("TEST");
   /* Get a new sensor event */
   sensors_event_t event;
   mag.getEvent(&event);

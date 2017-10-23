@@ -37,20 +37,6 @@ float y_diff = 0.0;
 
 void setup(void)
 {
-  #ifndef ESP8266
-    while (!Serial);     // will pause Zero, Leonardo, etc until serial console opens
-  #endif
-    Serial.begin(9600);
-    Serial.println("Accelerometer Test"); Serial.println("");
-  
-    /* Initialise the sensor */
-    if(!accel.begin())
-    {
-      /* There was a problem detecting the ADXL345 ... check your connections */
-      Serial.println("Ooops, no LSM303 detected ... Check your wiring!");
-      while(1);
-    }
-  
     /* Display some basic information on this sensor */
     displaySensorDetails();
     frontR.begin();
