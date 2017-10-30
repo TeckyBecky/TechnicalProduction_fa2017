@@ -192,6 +192,60 @@ void loop(void)
     {
       //Diagonal, Fast
     }
+    //------------------------------------------------DIAGONAL, FORWARD, UP, RIGHT----------------------------------------------------
+    else if(x_diff >= 5.5 && x_diff <= 6.5 && z_diff <= 5.5 && z_diff >= 6.5 && y_diff >= 5.5 && y_diff <= 6.5)
+    {
+        //Diagonal, Slow
+    }
+    else if(x_diff > 6.5 && z_diff > 6.5 && y_diff > 6.5)
+    {
+        //Diagonal, Fast
+    }
+    //------------------------------------------------DIAGONAL, FORWARD, UP, LEFT-----------------------------------------------------
+    else if(x_diff >= -5.5 && x_diff <= -6.5 && z_diff >= 5.5 && z_diff <= 6.5 && y_diff >= 5.5 && y_diff <= 6.5)
+    {
+        //Diagonal, Slow
+    }
+    else if(x_diff < -6.5 && z_diff > 6.5 && y_diff > 6.5)
+    {
+        //Diagonal, Fast
+    }
+    //------------------------------------------------DIAGONAL, BACKWARD, UP, LEFT-----------------------------------------------------
+    else if(x_diff <= -5.5 && x_diff >= -6.5 && z_diff >= 5.5 && z_diff <= 6.5 && y_diff <= -5.5 && y_diff >= -6.5)
+    {
+        //Diagonal, Slow
+    }
+    else if(x_diff < -6.5 && z_diff > 6.5 && y_diff < -6.5)
+    {
+        //Diagonal, Fast
+    }
+    //------------------------------------------------DIAGONAL, BACKWARD, UP, RIGHT-----------------------------------------------------
+    else if(x_diff >= 5.5 && x_diff <= 6.5 && z_diff >= 5.5 && z_diff <= 6.5 && y_diff >= -5.5 && y_diff <= -6.5)
+    {
+        //Diagonal, Slow
+    }
+    else if(x_diff > 6.5 && z_diff > 6.5 && y_diff < -6.5)
+    {
+        //Diagonal, Fast 
+    }
+    //-------------------------------------------------DIAGONAL, BACKWARD, DOWN, RIGHT-------------------------------------------------
+    else if(x_diff >= 5.5 && x_diff <= 6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= -5.5 && y_diff <= -6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff > 6.5 && z_diff < -6.5 && y_diff < -6.5)
+    {
+      //Diagonal, Fast
+    }
+    //-------------------------------------------------DIAGONAL, BACKWARD, DOWN, LEFT-------------------------------------------------
+    else if(x_diff <= -5.5 && x_diff >= -6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= -5.5 && y_diff <= -6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff < -6.5 && z_diff < -6.5 && y_diff < -6.5)
+    {
+      //Diagonal, Fast
+    }
     //-------------------------------------------------ALL OFF-------------------------------------------------
     else
     {
