@@ -210,6 +210,24 @@ void loop(void)
     {
         //Diagonal, Fast
     }
+   //-------------------------------------------------DIAGONAL, BACK, DOWN, RIGHT-------------------------------------------------
+    else if(x_diff >= 5.5 && x_diff <= 6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= -5.5 && y_diff <= -6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff > 6.5 && z_diff < -6.5 && y_diff > 6.5)
+    {
+      //Diagonal, Fast
+    }
+    //-------------------------------------------------DIAGONAL, BACK, DOWN, LEFT-------------------------------------------------
+    else if(x_diff <= -5.5 && x_diff >= -6.5 && z_diff <= -5.5 && z_diff >= -6.5 && y_diff >= -5.5 && y_diff <= -6.5)
+    {
+      //Diagonal, Slow
+    }
+    else if(x_diff < -6.5 && z_diff < -6.5 && y_diff > 6.5)
+    {
+      //Diagonal, Fast
+    }
     //-------------------------------------------------ALL OFF-------------------------------------------------
     else
     {
