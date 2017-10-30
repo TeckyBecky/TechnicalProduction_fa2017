@@ -1,0 +1,19 @@
+Git Edit Instructions
+1) (Jason) Copy accel_test 2 changes to accel_test_diagnol
+2) (Jason) Copy new accel_test_diagnol to test_editor
+3) (Ryan and Andrew) Map out and design all possible conditionals
+4) (Jason) Push text file onto Jason's own branch
+5) (Ryan and Andrew) Clone repository
+6) (Jason, Ryan and Andrew) Begin adding assigned conditionals
+7) (Jason, Ryan and Andrew) Push changes to github
+8) (Kenny) Pull all 3 branches, mege file into one using a text editor, place in arduino IDE and push new version of code
+
+Git Push Instructions
+1) Git clone (HTTP)
+2) cd-mac into repo [Change Directory from mac to repository]
+3) git status, check dirty files [Technical term for unmarked files that were changed]
+4) git branch, check branch
+5) git checkout -b [Create a new branch with a new name]
+6) git add -A [Add All]
+7) git commit -m [Write a message]
+8) git push origin [End statement with branch name]
